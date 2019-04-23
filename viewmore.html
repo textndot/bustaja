@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            팀원관리
+        </title>
+        <link rel="stylesheet" type="text/css" href="teammates.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="Rectangle">
+            <div class="top-bar">
+
+                <p> 로그아웃 </p>
+            </div>
+            <div class="nav-bar">
+                <div class="course">
+                    <p> 웹프로그래밍 개론 </p>
+                </div>
+                <div class="banners">
+                    <a id="teammate" href="teammates.html"> 팀원 관리 </a>
+                    <a id="schedule" href="timetable.html"> 시간표 관리 </a>
+                    <a id="minutes" href="회의록_관리.html"> 회의록 </a>
+                </div>
+            </div>
+            <div class="desc">
+                <p> 팀원을 추가하고, <br>팀원의 <span>출결 상황</span>을 조회해보세요. </p>
+            </div>
+            <div class="menu">
+                <a href="menu-act.html">메<br>뉴</a>
+            </div>
+            <table class="attendance">
+                <tbody>
+                    <tr>
+                        <td class="add-attendance">팀원 추가</td>
+                        <td class="add-attendance-contents"><input id="input" type="text"><img id="plus" src=""/></td>
+                    </tr>
+                    <tr>
+                        <td class="add-attendance">출결 조회</td>
+                        <td class="add-attendance-contents" id="attendance-list">
+                          <ul>공채린&nbsp&nbsp&nbsp <span class="blue_attend">출석 3회&nbsp&nbsp</span> <span class="yellow_attend">지각 0회&nbsp&nbsp</span> <span class="red_attend">결석 0회&nbsp&nbsp</span><a href="teammates.html"><img class="viewmore" src="chevron-left-solid.svg"/></a></ul>
+                          <ul>박성우 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                          <ul>우지명 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                          <ul>임지원 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                          <ul>홍유진 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="notice">
+                <div class="notice-contents">
+                    <img src="icon-help.svg"/>
+                    <p> 임지원님, <br>버스가 출발하지 못 하고<br>있습니다. 시간을 지켜주세요.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

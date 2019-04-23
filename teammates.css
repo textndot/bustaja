@@ -1,0 +1,937 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+@font-face {
+   font-family: 'typofactory';
+   src: url('Typo_FactoryM.ttf');
+}
+
+
+nav.stroke  a,
+nav.fill a {
+  position: relative;
+}
+nav.stroke  a:after,
+nav.fill  a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke  a:hover:after {
+  width: 100%;
+}
+
+nav.fill  a {
+  transition: all 2s;
+}
+
+nav.fill a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill  a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill  a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+body {overflow-x: hidden;
+}
+
+/* 전체 화면 */
+.Rectangle {
+    width: 100%;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.69);
+}
+
+/* 최상단 로고 ~ 로그아웃 같이 있는 박스 부분 */
+.top-bar {z-index: 3;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.69);
+    padding-bottom: 9px;
+    border-bottom: 1.3px solid #010101;
+}
+
+
+/*
+로고 부분에 대한 html 코드
+
+<!-- png -->
+
+<img src="img/logowhite.png"
+     srcset="img/logowhite@2x.png 2x,
+             img/logowhite@3x.png 3x"
+     class="logowhite">
+
+<!-- svg -->
+
+<img src="img/logowhite.svg"
+     class="logowhite">
+*/
+
+/* 좌측상단 로고 부분 - 이미지로 처리 */
+.logowhite {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: inline;
+    margin-top: -70px;
+    margin-left: 20px;
+}
+
+/* 우측상단 '로그아웃' 부분 */
+.top-bar p  {z-index: 3;
+    width: 70px;
+    height: 36px;
+    font-family: "Noto Sans KR";
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.4;
+    letter-spacing: -0.5px;
+    color: #000000;
+    float: right;
+    position: fixed;
+    right: 30px;
+    top: 10px;
+}
+
+/* 웹프로그래밍 개론~회의록 버튼 있는 부분 box */
+.nav-bar {z-index: 3;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: 69px;
+
+}
+
+/* '웹프로그래밍 개론' 들어있는 박스 */
+.course {z-index: 3;
+    width: 230px;
+    height: 69px;
+    position: relative;
+    left: 120px;
+    border: solid 1.3px #010101;
+    background-color: white;
+    opacity: 0.8;
+    text-align: center;
+    border-top: none;
+    display: inline-block;
+}
+
+/* '웹프로그래밍 개론' 텍스트 부분 */
+.course p {z-index: 3;
+    width: 146px;
+    height: 29px;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.7px;
+    color: #000000;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin: auto;
+    position: relative;
+    top: 18px;
+
+}
+
+.banners {
+    display: inline-block;
+    height: 69px;
+    position: relative;
+    left: 700px;
+    padding-right: 100px;
+    padding-left: 0px;
+    background-color: #ffffff;
+    opacity: 0.8;
+
+}
+
+.banners a {
+    text-decoration: none;
+    margin-left: 100px;
+
+}
+
+.banners a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* '팀원 관리' 텍스트 부분 */
+#teammate {z-index: 1;
+    width: 75px;
+    height: 29px;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    position: relative;
+    top:18px;
+    letter-spacing: -0.7px;
+    background-color: white;
+    transition: .5s;
+    color:black;
+
+}
+
+#teammate:hover {color: #5586ff;
+                }
+
+/* '시간표 관리' 텍스트 부분 */
+#schedule {z-index: 1;
+    text-decoration: none;
+    width: 93px;
+    height: 29px;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    position: relative;
+    top:18px;
+    letter-spacing: -0.7px;
+    transition: .5s;
+    color:black;
+}
+
+#schedule:hover {color: #5586ff;
+                }
+/* '회의록' 텍스트 부분 */
+#minutes {z-index: 1;
+    text-decoration: none;
+    width: 54px;
+    height: 29px;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    position: relative;
+    top:18px;
+    letter-spacing: -0.7px;
+    transition: .5s;
+    color:black;
+}
+
+#minutes:hover {color: #5586ff;
+                }
+
+/* 우측 '메뉴' 부분 비활성화시 */
+.menu {
+    z-index: 4;
+    position: fixed;
+    float: right;
+    top: 140px;
+    right: 0px;
+    width: 56px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+    background-color: #5586ff;
+    text-align: center;
+        text-decoration: none;
+        font-family: "Noto Sans KR";
+        font-size: 20px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2;
+        letter-spacing: -0.6px;
+        color: #ffffff;
+
+}
+
+.menu img {z-index: 5; width: 30px;}
+#menu_text {text-align: center;
+    text-decoration: none;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -0.6px;
+    color: #ffffff;}
+
+
+/* '메뉴' 부분 비활성화시 텍스트 부분 */
+/.menu a {
+    position: relative;
+    top: 27%;
+    width: 56px;
+    height: 136px;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -0.6px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* 우측 '메뉴' 부분 활성화시 전체 박스 부분*/
+.menu-act {z-index:5;
+    position: fixed;
+    top: 140px;
+    right: 0%;
+    float: right;
+    width: 188px;
+    height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+    background-color: #5586ff;
+}
+
+.menu-act a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu-act img {
+    height: 20px;
+    float: left;
+    fill: white;
+}
+
+#close {
+    float: right;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+/* '메뉴' 활성화시 나타나는 '팀생성', '현재팀', '지난팀' 버튼 부분 - 3개 모두 동일 */
+.menu-act-buttons {
+    position: relative;
+    top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 147px;
+    height: 38px;
+    border-radius: 11px;
+    border: solid 1px #ffffff;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* '메뉴' 활성화시 나타나는 '팀생성', '현재팀', '지난팀' 텍스트 부분 - 3개 모두 동일 */
+.menu-act-buttons {
+    font-family: "Noto Sans KR";
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2;
+    letter-spacing: -0.6px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.menu-act-buttons img {
+    position: relative;
+    top: 6px;
+    left: 15px;
+}
+
+/* '팀원을 추가하고~조회해보세요' 텍스트 부분 */
+.desc {z-index: 0;
+
+    clear: both;
+    position: relative;
+    display: inline-block;
+    top: 200px;
+    left: 170px;
+    width: 505px;
+    height: 100px;
+    font-family: "Noto Sans KR";
+    font-size: 32.2px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.55;
+    letter-spacing: -0.4px;
+    color: #575757;
+  }
+
+.desc span {
+    color: #5586ff;
+}
+
+.attendance {z-index: 0;
+    width: 1000px;
+    position: relative;
+    margin-left:450px;
+    top: 300px;
+}
+
+/* '팀원 추가', '출결 조회' 텍스트 부분 */
+.add-attendance {
+    width: 60px;
+    height: 31px;
+    font-family: "Noto Sans KR";
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 90px;
+    letter-spacing: -0.7px;
+    color: #000000;
+
+}
+
+#attendance-list
+{position: relative;
+top:60px;}
+/* '팀원 추가' 옆 입력박스 부분 */
+#input {z-index: 0;
+      border: solid 1.3px;
+    width: 262px;
+    height: 38px;
+    border-radius: 6px;
+    border: solid 1.3px #979797;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 22px;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+/* '팀원추가' 옆 + 픽토그램도 이미지*/
+
+#plus {
+  position: relative;
+  left:15px;top:12.5px;z-index: 0;
+  width: 30px;
+
+}
+
+/* '출결조회' 옆 조원 이름 부분 */
+.names {z-index: 0;
+    width: 60px;
+    height: 31px;
+    font-family: "Noto Sans KR";
+    font-size: 30px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 180%;
+    letter-spacing: -0.7px;
+    color: #000000;
+}
+
+.add-attendance-contents
+{ z-index: 0;
+  position: relative;
+  left: 0px;
+  width: 60px;
+  height: 31px;
+  font-family: "Noto Sans KR";
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 150%;
+  letter-spacing: -0.7px;
+  color: #000000;}
+
+/* 조원 이름 옆 출결사항 텍스트 부분 */
+#attendance  {
+    z-index: 0;
+    width: 68px;
+    height: 29px;
+    font-family: "Noto Sans KR";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.7px;
+    color: #5586ff;
+  }
+
+  .-\33  .text-style-1 {z-index: 0;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+  }
+
+  .-\33  .text-style-2 {z-index: 0;
+    letter-spacing: -0.7px;
+}
+
+/* 화살표는 이미지로 처리 */
+.viewmore{z-index: 0;
+    height: 18px;
+}
+
+.blue_attend {z-index: 0;
+    color: #5585ff;
+    font-weight: 300;
+}
+
+.yellow_attend {z-index: 0;
+    color: #FFCE6C;
+    font-weight: 300;
+}
+
+.red_attend {z-index: 0;
+    color: #ff6161;
+    font-weight: 300;
+}
+
+/* 우측 하단 팝업창 전체 박스 */
+.notice {z-index: 0;
+    clear: both;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    width: 290px;
+    height: 115px;
+    border-radius: 7px;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+.notice-contents {z-index: 0;
+    position: relative;
+    top: 22px;
+    left: 23px;
+    float: left;
+}
+
+/* 느낌표 픽토그램은 이미지로 처리 */
+.notice img {z-index: 0;
+    width: 54px;
+    display: inline;
+    float: left;
+    margin-right: 7px;
+
+}
+
+/* 알림 메시지 부분 */
+.notice p {z-index: 0;
+    width: 209px;
+    height: 75px;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: -0.6px;
+    color: #5e5e5e;
+    position: relative;
+    display: inline;
+    float: left;
+    margin-block-start: 0em;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Rectangle_2 {
+    position: relative;
+    top: 400px;
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.main_sentence {
+    width: 415px;
+    height: 150px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 32.2px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.55;
+    letter-spacing: -0.4px;
+    color: #3b3b3b;
+    position: relative;
+    left: 170px;
+    top: 100px;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+.blue {
+    font-weight: 400;
+    color: #5586ff;
+}
+
+.illustration {
+    width: 65%;
+    height: 65%;
+    position: absolute;
+    top: 50px;
+    left: -360px;
+    margin-top: 300px;
+    margin-bottom: 200px;
+    overflow: hidden;
+
+}
+
+/* 시간표 업로드 전체 박스 */
+.timetable_box {
+    width: 700px;
+    height: 600px;
+    border-radius: 28px;
+    box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    position: relative;
+    display: inline;
+    float: right;
+    clear: both;
+    overflow: hidden;
+    margin-right: 200px;
+    padding-right: 100px;
+    margin-top: 100px;
+}
+
+
+
+/*.upload {
+  padding: 50px 50px;
+  text-align:center;
+}*/
+/* 업로드 버튼 부분 활성화시 */
+/*.Oval {
+    width: 143px;
+    height: 143px;
+    border: solid 1px #5586ff;
+    background-color: #5586ff;
+}*/
+
+/* 주의사항 부분 */
+.warning1 {
+    width: 464px;
+    height: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.53;
+    letter-spacing: -0.5px;
+    color: #9c9c9c;
+    padding: 520px 20px 10px 20px;
+}
+
+/* 업로드 버튼 부분 비활성화시 */
+.Oval {z-index: 0;
+    width: 143px;
+    height: 143px;
+    border: solid 1px #5586ff;
+    border-radius: 100%;
+    position: relative;
+    display: inline;
+    float: right;
+    clear: both;
+    overflow: hidden;
+    margin-right: 460px;
+    padding-top:  60px;
+    z-index: 5;
+    text-align:center;
+    margin-top: -370px;
+    transition: .5s;
+}
+
+.Oval:hover {
+background-color: #5586ff;
+}
+
+
+/* 전체 요소들 담고 있는 부분 */
+.container {
+
+    position: relative;
+    top: 600px;
+    width: 1270px;
+    display: block;
+    margin: auto;
+}
+
+/* 지난 회의록 및 날짜 선택 박스 전체 담고 있는 부분 */
+.date_nav {
+
+    position: relative;
+    top: -50px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+/* '지난 회의록 텍스트 */
+.past {
+    width: 280px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 16px;
+    border: 1px #dfdfdf;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color: #000000;
+    text-align: center;
+    background-color: #dfdfdf;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+
+
+}
+
+/* 날짜 박스 부분 */
+.date {
+    width: 280px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'typofactory';
+    font-size: 16.5px;
+}
+
+.date_nav a {
+    text-decoration: none;
+    color: #474747;
+}
+
+.date_nav a:hover {
+    text-decoration: none;
+}
+
+.date:hover {background-color: #5586ff;}
+
+/* 회의록 작성 상단 바 및 작성 부분 담고 있는 박스 */
+.textfield {
+    width: 605px;
+    height: 830px;
+    float: left;
+    position: relative;
+    top: -40px;
+    margin-left: 50px;
+}
+
+.textfield: hover {border: 0px;}
+
+/* 회의록 상단 바 */
+.upper {
+    width: 605px;
+    height: 70px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* 제목 작성 부분 */
+.upper #title {
+    float: left;
+    margin-top: 7px;
+    margin-left: 30px;
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 10px;
+    color: #0C0C0C;
+}
+
+
+
+/* 텍스트 정렬 이미지 담고 있는 박스 */
+.upper #img {
+    margin-left: 45px;
+}
+
+/* 텍스트 정렬 이미지 */
+.upper #img img {
+    width: 25px;
+    height: 25px;
+    margin-top: 8px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+/* 저장 버튼 부분 */
+.upper #save {
+    float: right;
+    margin-top: 13px;
+    margin-right: 20px;
+    background-color: #5586ff;
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.upper button:focus {
+    outline: none;
+}
+
+/* 회의록 작성 부분 담고 있는 박스 */
+.notepad {
+    width: 605px;
+    height: 740px;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.22);
+    background-color: #ffffff;
+    float: left;
+    margin-top: 10px;
+    right: 20px;
+}
+
+/* 회의록 작성 부분 */
+.notepad #field {
+    width: 595px;
+    height: 730px;
+    display: block;
+    margin: auto;
+    resize: none;
+    border: none;
+    font-size: 17.5px;
+    line-height: 1.5;
+    color: #0C0C0C;
+    font-weight: 300;
+    font-family: 'Noto Sans KR';
+    padding-top: 20px;
+    line-height: 1.5;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+/* 출결체크 박스 부분 */
+.manage {
+    width: 303px;
+    height: 331px;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.36);
+    background-color: #ffce6c;
+    position: relative;
+    top: -40px;
+    margin-left: 985px;
+    margin-right: 400px;
+
+}
+
+/* 회의하기 전 출결 체크 해볼까요? */
+.question {
+    width: 303px;
+    height: 50px;
+    background-color: #ffce6c;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+    font-family: 'typofactory';
+    text-align: center;
+    padding-top: 16px;
+    font-size: 16px;
+    color: #282828;
+
+}
+
+
+/* 출석 지각 결석 텍스트 박스 부분 */
+.checkitem {
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+/* 출석 결석 지각 텍스트 */
+.checkitem #item {
+    display: inline;
+    margin-left: 28px;
+}
+
+/* 이름 담고 있는 박스 */
+.list {
+    float: left;
+}
+
+/* 이름 부분 */
+.list #name {
+    width: 63px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 11px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+/* 라디오 버튼 부분 */
+.radio {
+    margin-top: 14px;
+}
+
+.radio input[type="radio"] {
+    margin-left: 38px;
+    width: 20px;
+    height: 20px;
+}
+
+/* 저장 버튼 부분 */
+.button {
+  border-style: none;
+    width: 66px;
+    height: 67px;
+    border-radius: 33.5px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ff6161;
+    position: absolute;
+    top: 30px;
+    left: 270px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.manage button:focus {
+    outline: none;
+}

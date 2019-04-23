@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            팀원관리
+        </title>
+        <link rel="stylesheet" type="text/css" href="teammates.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    </head>
+    <body>
+
+<!--우측 고정 메뉴바 펼친 버전-->
+<div class="menu-act">
+    <a href="teammates.html"><img src="ffftimes-solid.svg" id="close"></a>
+    <a href="team_up.html"><div class="menu-act-buttons">&nbsp&nbsp팀 생성</div></a>
+    <div class="menu-act-buttons"><img src="fffangle-down-solid.svg"> 현재 팀</div>
+    <div class="menu-act-buttons"><img src="fffangle-down-solid.svg"> 지난 팀</div>
+</div>
+
+
+<!--팀원 관리 파트-->
+        <div class="Rectangle" id="anchor1">
+            <div class="top-bar">
+                <a href="mainpage.html" text-decotation="none"><p> 로그아웃 </p></a>
+
+            </div>
+            <div class="nav-bar">
+                <div class="course">
+                    <p> 웹프로그래밍 개론 </p>
+                </div>
+                <nav class="banners">
+                    <a id="teammate" href="#anchor1"> 팀원 관리 </a>
+                    <a id="schedule" href="#anchor2"> 시간표 관리 </a>
+                    <a id="minutes" href="#anchor3"> 회의록 </a>
+                </nav>
+            </div>
+            <div class="desc">
+                <p> 팀원을 추가하고, <br>팀원의 <span>출결 상황</span>을 조회해보세요. </p>
+            </div>
+
+
+
+            <table class="attendance">
+                <tbody>
+                    <tr>
+                        <td class="add-attendance">팀원 추가</td>
+                        <td class="add-attendance-contents"><input id="input" type="text"><img id="plus" src="plus-solid.svg"/></td>
+                    </tr>
+                    <tr>
+                        <td class="add-attendance">출결 조회</td>
+                        <td class="add-attendance-contents" id="attendance-list">
+                          <ul>공채린 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                          <ul>박성우 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                          <ul>우지명 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                          <ul>임지원 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                          <ul>홍유진 <a href="viewmore.html"><img class="viewmore" src="chevron-right-solid.svg"/></a></ul>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="notice">
+                <div class="notice-contents">
+                    <img src="icon-help.svg"/>
+                    <p> 임지원님, <br>버스가 출발하지 못 하고<br>있습니다. 시간을 지켜주세요.</p>
+                </div>
+            </div>
+        </div>
+
+<!--시간표 파트-->
+        <div id="anchor2" class="Rectangle_2">
+          <div class="main_sentence">
+            각 팀원의 <span class="blue">시간표</span>를<br>업로드하여<br><span class="blue">팀플 회의 시간</span>을 정해보세요.
+          </div>
+          <div>
+            <img src="./illustration.png" class="illustration">
+          </div>
+          <div class="timetable_box">
+            <p class="warning1">주의사항<br>*흰색 배경의 시간표를 사용해주세요.</p>
+          </div>
+          <div class="Oval">업로드
+          </div>
+        </div>
+
+<!--회의록 파트-->
+        <div id="anchor3" class="container">
+            <div class="date_nav">
+                <p class="past"><a href="#">지난 회의록</a></p>
+                <p class="date"><a href="#">2019.03.16</a></p>
+                <p class="date"><a href="#">2019.03.20</a></p>
+                <p class="date"><a href="#">2019.04.04</a></p>
+                <p class="date"><a href="#">2019.04.19</a></p>
+            </div>
+            <div class="textfield">
+                <div class="upper">
+                    <input id="title" type="text" value="웹프개 두 번째 모임">
+                    <span id="img">
+                        <img src="align-justify-solid.svg">
+                        <img src="align-left-solid.svg">
+                        <img src="align-center-solid.svg">
+                        <img src="align-right-solid.svg">
+                    </span>
+                    <button id="save" type="submit">저장</button>
+                </div>
+                <div class="notepad">
+                    <textarea id="field">회의록</textarea>
+                </div>
+            </div>
+            <form class="manage">
+                <div class="question">
+                    <p>회의하기 전 출결 체크 해볼까요?</p>
+                </div>
+                <div class="checkitem">
+                    <p id="item">출석</p>
+                    <p id="item">지각</p>
+                    <p id="item">결석</p>
+                </div>
+                <div class="list">
+                    <p id="name">공채린</p>
+                    <p id="name">박성우</p>
+                    <p id="name">우지명</p>
+                    <p id="name">임지원</p>
+                    <p id="name">홍유진</p>
+                </div>
+                <div class="radio" id="1">
+                    <div>
+                        <input type="radio" name="1">
+                        <input type="radio" name="1">
+                        <input type="radio" name="1">
+                    </div>
+                </div>
+                <div class="radio" id="2">
+                    <input type="radio" name="2">
+                    <input type="radio" name="2">
+                    <input type="radio" name="2">
+                </div>
+                <div class="radio" id="3">
+                    <input type="radio" name="3">
+                    <input type="radio" name="3">
+                    <input type="radio" name="3">
+                </div>
+                <div class="radio" id="4">
+                    <input type="radio" name="4">
+                    <input type="radio" name="4">
+                    <input type="radio" name="4">
+                </div>
+                <div class="radio" id="5">
+                    <input type="radio" name="5">
+                    <input type="radio" name="5">
+                    <input type="radio" name="5">
+                </div>
+                <button class="button" type="submit">저장</button>
+            </form>
+        </div>
+    </body>
+</html>

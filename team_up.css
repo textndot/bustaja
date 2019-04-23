@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+body {background-color: #fafafa;}
+/* 전체 화면 */
+.Rectangle {
+    width: 100%;
+    height: 600px;
+    background-color: #fafafa;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+/* 좌측상단 로고 부분 - 이미지로 처리 */
+.logowhite {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: inline;
+    margin-top: -70px;
+    margin-left: 20px;
+}
+
+/* '팀 만들기' 텍스트 */
+.team-up-title {
+    width: 100%;
+    height: 140px;
+    font-family: "Noto Sans KR";
+    font-size: 29.2px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.team-up-info {
+    position: relative;
+    margin:auto;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.team-details {
+    display:inline;
+    position:relative;
+    float:left;
+}
+
+/* 입력 항목 부분 - 4개 모두 동일 */
+.team-detail {
+    width: 181px;
+    height: 28px;
+    font-family: "Noto Sans KR";
+    font-size: 19px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #404040;
+    text-align: left;
+
+}
+
+.team-boxes {
+    float: left;
+    position: relative;
+    display: inline-block;
+}
+
+/* 입력 box 부분 - 4개 모두 동일 */
+.team-box {
+    width: 287px;
+    height: 34px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    border: solid 0.5px #D3D3D3;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    color: #5282ff;
+    padding-left: 10px;
+}
+
+
+
+.team-start-bar {
+    clear: both;
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 280px;
+    text-align: center;
+    background-color: #fafafa;
+    top: 150px;
+}
+
+
+/* 시작하기 전체 버튼 부분 */
+.button {
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 0 #5282ff;
+    border: solid 1.5px #5586ff;
+    background-color:#5282ff;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding-top: 4px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 175px;
+    left: 183px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button a {text-decoration: none;
+  color:#ffffff;}
+
+/* 불사조 웹프로그램이개론 노선 생성 알림*/
+.layer {
+    background-color: #000000;
+    opacity: 0.56;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1000px;
+}
+
+.layer-contents {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    height: 460;
+    opacity: 1.0;
+    text-align: center;
+    color: #FFCE6C;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.layer-contents img {
+    height: 120px;
+}
+
+.layer-contents p {
+    margin-block-start: -1em;
+}
+
+.link {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.bold {font-weight: 400;}

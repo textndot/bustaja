@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+
+/* 전체 화면 */
+body {
+    background-color: #fafafa;
+    font-family: 'Noto Sans KR'
+}
+
+/* 좌측상단 로고 부분 - 이미지로 처리 */
+.logowhite {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: inline;
+    margin-top: -70px;
+    margin-left: 20px;
+}
+
+/* 로그인 텍스트 box 부분 */
+.login {
+    width: 632px;
+    height: 65px;
+    font-size: 29.2px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: auto;
+
+}
+
+button a {text-decoration: none;
+          color: white;}
+table {
+    margin: auto;
+    position: relative;
+    top: 100px;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+th {
+    text-align: left;
+}
+
+/* 입력 항목 부분 - 7개 모두 동일*/
+.inputitem {
+    width: 181px;
+    height: 29px;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #404040;
+
+}
+
+/* 입력 box 부분 - 7개 모두 동일 */
+.inputbox {
+    width: 287px;
+    height: 34px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    border: solid 0.5px #D3D3D3;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    color: #5282ff;
+    padding-left: 10px;
+}
+
+.forgot {
+    text-align: center;
+    position: relative;
+    top: 165px;
+    left: 153px;
+}
+
+.forgot a{
+    text-decoration: none;
+}
+
+.forgot a, span {
+    color: #8A8A8A
+}
+
+/* 가입하기 전체 버튼 */
+.button {
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 0 #5282ff;
+    border: solid 1.5px #5586ff;
+    background-color:#5282ff;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+button {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 175px;
+    left: 183px;
+}
+
+button:focus {
+    outline: none;
+}
